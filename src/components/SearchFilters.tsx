@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { CarType, getCarBrands } from "../services/carService";
+import { getCarBrands } from "../services/carService";
 import { Filter, ChevronDown, ChevronUp } from "lucide-react";
 
 interface SearchFiltersProps {
@@ -50,12 +50,6 @@ const SearchFilters = ({ onFilterChange }: SearchFiltersProps) => {
       ...filters,
       [name]: value,
     };
-
-    if (name === "minPrice") {
-      updatedFilters.priceRange = [value, filters.priceRange[1]];
-    } else if (name === "maxPrice") {
-      updatedFilters.priceRange = [filters.priceRange[0], value];
-    }
 
     setFilters(updatedFilters);
     onFilterChange(updatedFilters);

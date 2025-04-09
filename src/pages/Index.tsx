@@ -1,10 +1,9 @@
 
 import { useState, useEffect } from "react";
 import { CarType, filterCars } from "../services/carService";
-import { SearchFilters } from "../components/SearchFilters";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import SearchFilters from "../components/SearchFilters";
+import SearchFilters, { SearchFilters as SearchFiltersType } from "../components/SearchFilters";
 import CarGrid from "../components/CarGrid";
 import Footer from "../components/Footer";
 
@@ -12,7 +11,7 @@ const Index = () => {
   const [cars, setCars] = useState<CarType[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filters, setFilters] = useState<SearchFilters>({
+  const [filters, setFilters] = useState<SearchFiltersType>({
     brand: "",
     priceRange: [0, 10000000],
     fuelType: "",
@@ -47,7 +46,7 @@ const Index = () => {
     setSearchQuery(query);
   };
 
-  const handleFilterChange = (newFilters: SearchFilters) => {
+  const handleFilterChange = (newFilters: SearchFiltersType) => {
     setFilters(newFilters);
   };
 
