@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
 
-## Project info
+# CarBecho - Car Marketplace App
 
-**URL**: https://lovable.dev/projects/08df1edb-cad6-4249-9c9e-8bdedd790153
+Find your dream car with CarBecho, a modern car marketplace web application built with React, TypeScript, and Tailwind CSS.
 
-## How can I edit this code?
+![CarBecho Screenshot](https://images.unsplash.com/photo-1546614042-7df3c24c9e5d?q=80&w=1470&auto=format&fit=crop)
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- Browse cars with advanced filtering options
+- Detailed car information pages
+- Add cars to your wishlist
+- Responsive design for all devices
+- Modern UI with dark theme
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/08df1edb-cad6-4249-9c9e-8bdedd790153) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- React 18
+- TypeScript
+- Tailwind CSS
+- Shadcn UI Components
+- React Router
+- React Query
+- Vite
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v16 or higher)
+- npm or yarn or pnpm or bun
 
-Follow these steps:
+### Installation
+
+1. Clone the repository:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/yourusername/carbecho.git
+cd carbecho
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
 
-**Use GitHub Codespaces**
+3. Start the development server:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```sh
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## What technologies are used for this project?
+4. Open your browser and navigate to:
 
-This project is built with:
+```
+http://localhost:8080
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/     # Reusable UI components
+├── hooks/          # Custom React hooks
+├── pages/          # Page components
+├── services/       # API and data services
+├── utils/          # Utility functions
+├── App.tsx         # Application entry component
+├── main.tsx        # Application bootstrap
+└── index.css       # Global styles
+```
 
-Simply open [Lovable](https://lovable.dev/projects/08df1edb-cad6-4249-9c9e-8bdedd790153) and click on Share -> Publish.
+## Key Components
 
-## Can I connect a custom domain to my Lovable project?
+- **CarCard**: Displays a car in the grid view with basic information
+- **CarGrid**: Responsive grid layout for displaying car cards
+- **SearchFilters**: Advanced filtering options for cars
+- **Navbar**: Navigation component with links and search
+- **CarDetail**: Detailed car information page
 
-Yes it is!
+## Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This project can be deployed on any static hosting platform:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Build the production version:
+
+```sh
+npm run build
+# or
+yarn build
+# or
+pnpm build
+# or
+bun build
+```
+
+2. Deploy the contents of the `dist` directory to your hosting platform.
+
+## Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Car images provided by [Unsplash](https://unsplash.com/)
+- UI components from [Shadcn UI](https://ui.shadcn.com/)
