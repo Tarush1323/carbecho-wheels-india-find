@@ -13,6 +13,7 @@ const CarDetail = () => {
   const navigate = useNavigate();
   const [car, setCar] = useState<CarType | null>(null);
   const [loading, setLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
   const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
   useEffect(() => {
@@ -46,6 +47,10 @@ const CarDetail = () => {
     } else {
       addToWishlist(car);
     }
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
   };
 
   if (loading) {
@@ -114,9 +119,13 @@ const CarDetail = () => {
         {/* Car images */}
         <div className="mb-8">
           <img 
-            src={car.image} 
+            src={imageError 
+              ? 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1937&auto=format&fit=crop' 
+              : car.image
+            } 
             alt={`${car.brand} ${car.model}`} 
             className="w-full h-96 object-cover rounded-lg"
+            onError={handleImageError}
           />
         </div>
         

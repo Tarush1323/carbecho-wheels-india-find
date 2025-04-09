@@ -12,13 +12,20 @@ interface CarCardProps {
 }
 
 const CarCard = ({ car, isInWishlist, onToggleWishlist }: CarCardProps) => {
+  const [imageError, setImageError] = useState(false);
+  
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   return (
     <div className="carbecho-card h-full flex flex-col">
       <div className="relative">
         <img 
-          src={car.image} 
+          src={imageError ? 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1937&auto=format&fit=crop' : car.image} 
           alt={`${car.brand} ${car.model}`} 
           className="w-full h-48 object-cover"
+          onError={handleImageError}
         />
         <button 
           className={`absolute top-2 right-2 p-2 rounded-full ${
