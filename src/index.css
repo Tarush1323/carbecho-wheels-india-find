@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,36 +34,21 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
+  /* CarBecho is dark-mode by default */
+  :root {
+    --background: 0 0% 7%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 0 0% 12%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 0 0% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 24 100% 53%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -70,23 +56,15 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 24 100% 53%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --ring: 24 100% 53%;
   }
 }
 
@@ -96,6 +74,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-carbecho-dark text-foreground;
+  }
+}
+
+@layer components {
+  .carbecho-container {
+    @apply container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .carbecho-card {
+    @apply bg-carbecho-dark-card border border-carbecho-dark-border rounded-lg overflow-hidden hover:shadow-md hover:shadow-carbecho-orange/20 transition-all duration-300;
+  }
+  
+  .carbecho-input {
+    @apply bg-transparent border border-carbecho-dark-border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-carbecho-orange;
+  }
+  
+  .carbecho-button {
+    @apply bg-carbecho-orange text-white rounded-md px-4 py-2 hover:bg-carbecho-orange-glow transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-carbecho-orange;
+  }
+  
+  .carbecho-button-outline {
+    @apply bg-transparent border border-carbecho-orange text-carbecho-orange rounded-md px-4 py-2 hover:bg-carbecho-orange/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-carbecho-orange;
   }
 }
