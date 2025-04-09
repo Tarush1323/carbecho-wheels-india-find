@@ -167,7 +167,7 @@ const cars: CarType[] = [
     transmission: 'Automatic',
     seatingCapacity: 5,
     image: 'https://images.unsplash.com/photo-1575750951732-61a1f53e5ce8?q=80&w=1473&auto=format&fit=crop',
-    description: 'The Tata Harrier is a stylish SUV based on Land Rover's D8 platform, offering a commanding road presence and premium features.',
+    description: 'The Tata Harrier is a stylish SUV based on Land Rover\'s D8 platform, offering a commanding road presence and premium features.',
     features: ['Panoramic Sunroof', 'JBL Premium Audio', '8.8-inch Touchscreen', 'iRA Connected Car Tech', '6 Airbags']
   },
   {
